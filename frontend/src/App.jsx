@@ -16,7 +16,7 @@ function App() {
 
   const messagesEndRef = useRef(null);
 
-  const apiUrl = "/chat";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   // Load theme from localStorage on component mount
   useEffect(() => {
@@ -67,7 +67,7 @@ function App() {
           text: msg.text,
         }));
 
-      const response = await fetch(apiUrl, {
+      const response = await fetch(`${API_URL}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
