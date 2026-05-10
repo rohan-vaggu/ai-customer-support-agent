@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f172a;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f172a;
+  transition: background-color 0.3s ease;
+}
+
+.app.light-mode {
+  background-color: #f1f5f9;
+}
+
+.chat-box {
+  width: 400px;
+  height: 600px;
+  background: #1e293b;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #334155;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.app.light-mode .chat-box {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #111827;
+  transition: background-color 0.3s ease;
+}
+
+.app.light-mode .header {
+  background: #f8fafc;
+}
+
+.chat-box h1 {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.app.light-mode .chat-box h1 {
+  color: #1e293b;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app.light-mode .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1e293b;
+  transition: background-color 0.3s ease;
+}
+
+.app.light-mode .messages {
+  background: #ffffff;
+}
+
+.message {
+  max-width: 75%;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  word-wrap: break-word;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #2563eb;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #475569;
+}
+
+.app.light-mode .message.user {
+  background: #2563eb;
+  color: white;
+}
+
+.app.light-mode .message.bot {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.input-area {
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+  background: #111827;
+  transition: background-color 0.3s ease;
+}
+
+.app.light-mode .input-area {
+  background: #f8fafc;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: #334155;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.light-mode .input-area input {
+  background: #f1f5f9;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.input-area input::placeholder {
+  color: #94a3b8;
+}
+
+.app.light-mode .input-area input::placeholder {
+  color: #64748b;
+}
+
+.input-area button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background: #1d4ed8;
+}

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "uvicorn app:app --reload --host 0.0.0.0 --port 8000"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.2.4"
+  }
+}
